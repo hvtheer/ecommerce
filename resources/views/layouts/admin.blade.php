@@ -26,6 +26,7 @@
 <body>
     <div class="container-scroller">
         @include('layouts.inc.admin.navbar')
+        
         <div class="container-fluid page-body-wrapper">
             @include('layouts.inc.admin.sidebar')
 
