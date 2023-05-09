@@ -5,13 +5,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Category delete</h5>
+                    <h5 class="modal-title" id="deleteModalLabel">Delete category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <form wire:submit.prevent="destroyCategory">
                     <div class="modal-body">
-                        <h6>Do you want to delete this data?</h6>
+                        <h4>Do you want to delete this data?</h4>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

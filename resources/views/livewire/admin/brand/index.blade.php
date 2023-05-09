@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             {{-- @if (session('message'))
-                <h2 class="alert alert-success">{{ session('message') }}</h2>
+            <h2 class="alert alert-success">{{ session('message') }}</h2>
             @endif --}}
             <div class="card">
                 <div class="card-header">
@@ -40,8 +40,10 @@
                                     {{ $brand->status == '1' ? 'Hidden':'Visible' }}
                                 </td>
                                 <td>
-                                    <a href="#" class="btn btn-success">Edit</a>
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <a href="#" wire:click="editBrand({{$brand->id}})" data-bs-toggle="modal"
+                                        data-bs-target="#updateBrandModal" class="btn btn-success">Edit</a>
+                                    <a href="#" wire:click="deleteBrand({{$brand->id}})" data-bs-toggle="modal"
+                                        data-bs-target="#deleteBrandModal" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                             @endforeach
@@ -61,6 +63,8 @@
 <script>
     window.addEventListener('close-modal', event => {
         $('#addBrandModal').modal('hide');
+        $('#updateBrandModal').modal('hide');
+        $('#deleteBrandModal').modal('hide');
     });
 
 </script>
