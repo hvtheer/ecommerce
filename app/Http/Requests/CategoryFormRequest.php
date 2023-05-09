@@ -48,7 +48,7 @@ class CategoryFormRequest extends FormRequest
             'meta_description' => [
                 'required',
                 'string'
-            ],
+            ]
         ];
     }
 }

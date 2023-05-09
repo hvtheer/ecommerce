@@ -16,7 +16,7 @@
                     @method('PUT')
 
                     <div class="row">
-    
+
                         <div class="col-md-6 mb-3">
                             <label>Name</label>
                             <input type="text" name="name" value="{{ $category->name }}" class="form-control" />
@@ -29,7 +29,8 @@
                         </div>
                         <div class="col-md-12 mb-3">
                             <label>Description</label>
-                            <textarea name="description" class="form-control" rows="3">{{ $category->description }}</textarea>
+                            <textarea name="description" class="form-control"
+                                rows="3">{{ $category->description }}</textarea>
                             @error('description') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
@@ -39,37 +40,41 @@
                             @error('image') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label>Status</label><br/>
-                            <input type="checkbox" {{ $category->status == '1' ? 'unchecked':'checked' }} name="status" />
+                            <label>Status</label><br />
+                            <input type="checkbox" {{ $category->status == '1' ? 'unchecked':'checked' }}
+                            name="status" />
                             @error('status') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
-    
+
                         <div class="col-md-12">
                             <h4>SEO Tags</h4>
                         </div>
-    
+
                         <div class="col-md-12 mb-3">
                             <label>Meta title</label>
-                            <input type="text" name="meta_title" value="{{ $category->meta_title }}" class="form-control" />
+                            <input type="text" name="meta_title" value="{{ $category->meta_title }}"
+                                class="form-control" />
                             @error('meta_title') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
                         <div class="col-md-12 mb-3">
                             <label>Meta keyword</label>
-                            <textarea name="meta_keyword" class="form-control" rows="3">{{ $category->meta_keyword }}</textarea>
+                            <textarea name="meta_keyword" class="form-control"
+                                rows="3">{{ $category->meta_keyword }}</textarea>
                             @error('meta_keyword') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
                         <div class="col-md-12 mb-3">
                             <label>Meta description</label>
-                            <textarea name="meta_description" class="form-control" rows="3">{{ $category->meta_description }}</textarea>
+                            <textarea name="meta_description" class="form-control"
+                                rows="3">{{ $category->meta_description }}</textarea>
                             @error('meta_description') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
-    
+
                         <div class="col-md-12 mb-3">
                             <button type="submit" class="btn btn-primary float-end">Save</button>
                         </div>
-    
+
                     </div>
-                </form> 
+                </form>
 
             </div>
         </div>

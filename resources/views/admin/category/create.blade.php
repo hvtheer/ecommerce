@@ -14,7 +14,7 @@
                 <form action="{{ url('admin/category') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-    
+
                         <div class="col-md-6 mb-3">
                             <label>Name</label>
                             <input type="text" name="name" class="form-control" />
@@ -36,15 +36,15 @@
                             @error('image') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label>Status</label><br/>
+                            <label>Status</label><br />
                             <input type="checkbox" name="status" />
                             @error('status') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
-    
+
                         <div class="col-md-12">
                             <h4>SEO Tags</h4>
                         </div>
-    
+
                         <div class="col-md-12 mb-3">
                             <label>Meta title</label>
                             <input type="text" name="meta_title" class="form-control" />
@@ -60,13 +60,13 @@
                             <textarea name="meta_description" class="form-control" rows="3"></textarea>
                             @error('meta_description') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
-    
+
                         <div class="col-md-12 mb-3">
                             <button type="submit" class="btn btn-primary float-end">Save</button>
                         </div>
-    
+
                     </div>
-                </form> 
+                </form>
 
             </div>
         </div>
