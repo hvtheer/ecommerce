@@ -1,11 +1,12 @@
 <div>
     <!-- Modal -->
-    <div wire:ignore.self class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div wire:ignore.self class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Category delete</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="deleteModalLabel">Category delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <form wire:submit.prevent="destroyCategory">
@@ -25,12 +26,13 @@
     <div class="row">
         <div class="col-md-12">
             @if (session('message'))
-                <h2 class="alert alert-success">{{ session('message') }}</h2>
+            <h2 class="alert alert-success">{{ session('message') }}</h2>
             @endif
             <div class="card">
                 <div class="card-header">
                     <h4>Category
-                        <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm float-end">Add category</a>
+                        <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm float-end">Add
+                            category</a>
                     </h4>
                 </div>
                 <div class="card-body">
@@ -45,15 +47,17 @@
                         </thead>
                         <tbody>
                             @foreach ($categories as $category)
-                                <tr>
-                                    <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    <td>{{ $category->status == '1' ? 'Hidden':'Visible' }}</td>
-                                    <td>
-                                        <a href="{{ url('admin/category/'.$category->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href="#" wire:click="deleteCategory({{$category->id}})" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>{{ $category->id }}</td>
+                                <td>{{ $category->name }}</td>
+                                <td>{{ $category->status == '1' ? 'Hidden':'Visible' }}</td>
+                                <td>
+                                    <a href="{{ url('admin/category/'.$category->id.'/edit') }}"
+                                        class="btn btn-success">Edit</a>
+                                    <a href="#" wire:click="deleteCategory({{$category->id}})" class="btn btn-danger"
+                                        data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</a>
+                                </td>
+                            </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -69,9 +73,10 @@
 </div>
 
 @push('script')
-    <script>
-        window.addEventListener('close-modal', event => {
-            $('#deleteModal').modal('hide');`
-        });
-    </script>
+<script>
+    window.addEventListener('close-modal', event => {
+        $('#deleteModal').modal('hide');
+    });
+
+</script>
 @endpush

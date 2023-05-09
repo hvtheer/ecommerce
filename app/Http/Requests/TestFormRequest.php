@@ -39,7 +39,7 @@ class TestFormRequest extends FormRequest
             ],
             'meta_title' => [
                 'required',
-            ],
+            ]
         ];
     }
 }
