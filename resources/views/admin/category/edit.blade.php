@@ -42,7 +42,7 @@
                         <div class="col-md-6 mb-3">
                             <label>Status</label><br />
                             <input type="checkbox" {{ $category->status == '1' ? 'unchecked':'checked' }}
-                            name="status" />
+                                name="status" />
                             @error('status') <small class="text-danger">{{ $message }}</small>@enderror
                         </div>
 
