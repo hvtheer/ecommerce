@@ -52,6 +52,7 @@
                             <div class="mb-3">
                                 <label>Category</label>
                                 <select name="category_id" class="form-control">
+                                    <option value="">Selecect category</option>
                                     @foreach ($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
@@ -68,6 +69,7 @@
                             <div class="mb-3">
                                 <label>Brand</label>
                                 <select name="brand" class="form-control">
+                                    <option value="">Selecect brand</option>
                                     @foreach ($brands as $brand)
                                     <option value="{{ $brand->name }}">{{ $brand->name }}</option>
                                     @endforeach

@@ -42,6 +42,8 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function() {
         Route::post('product', 'store');
         Route::get('product/{product}/edit', 'edit');
         Route::put('product/{product}', 'update');
+        Route::get('product/{product}/delete', 'destroy');
+        Route::get('product-image/{product_image_id}/delete', 'destroyImage');
     });
 
     Route::get('brand', App\Http\Livewire\Admin\Brand\Index::class);

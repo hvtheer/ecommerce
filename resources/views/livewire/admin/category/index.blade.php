@@ -77,6 +77,5 @@
     window.addEventListener('close-modal', event => {
         $('#deleteModal').modal('hide');
     });
-
 </script>
 @endpush
