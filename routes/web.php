@@ -35,10 +35,14 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function() {
         Route::put('category/{category}', 'update');
     });
 
-    Route::get('brand', App\Http\Livewire\Admin\Brand\Index::class);
+    // Category Routes
+    Route::controller(App\Http\Controllers\Admin\ProductController::class)->group(function() {
+        Route::get('product', 'index');
+        Route::get('product/create', 'create');
+        Route::post('product', 'store');
+        Route::get('product/{product}/edit', 'edit');
+        Route::put('product/{product}', 'update');
+    });
 
-    // Test Routes
-    Route::get('test', [App\Http\Controllers\Admin\TestController::class, 'index']);
-    Route::get('test/create', [App\Http\Controllers\Admin\TestController::class, 'create']);
-    Route::post('test', [App\Http\Controllers\Admin\TestController::class, 'store']);
+    Route::get('brand', App\Http\Livewire\Admin\Brand\Index::class);
 });
