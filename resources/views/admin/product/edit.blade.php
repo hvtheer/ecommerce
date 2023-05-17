@@ -141,14 +141,13 @@
                                     <div class="mb-3">
                                         <label>Trending</label> </br>
                                         <input type="checkbox" name="trending"
-                                            {{ $product->status == '1' ? 'unchecked':'checked' }} />
+                                            {{ $product->trending ? 'checked':'' }} />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label>Status</label> </br>
-                                        <input type="checkbox" name="status"
-                                            {{ $product->status == '1' ? 'unchecked':'checked' }} />
+                                        <input type="checkbox" name="status" {{ $product->status ? 'checked':'' }} />
                                     </div>
                                 </div>
                             </div>
@@ -160,8 +159,10 @@
                                 <div class="row">
                                     @foreach ($product->productImages as $image)
                                     <div class="col-md-2">
-                                        <img src="{{ asset($image->image) }}" style="width: 80px; height: 80px;" class="me-4" alt="img">
-                                        <a href="{{ url('admin/product-image/'.$image->id.'/delete')}}" class="d-block">Remove</a>
+                                        <img src="{{ asset($image->image) }}" style="width: 80px; height: 80px;"
+                                            class="me-4" alt="img">
+                                        <a href="{{ url('admin/product-image/'.$image->id.'/delete')}}"
+                                            class="d-block">Remove</a>
                                     </div>
                                     @endforeach
                                 </div>
@@ -169,7 +170,7 @@
                         </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
                 </form>
             </div>
