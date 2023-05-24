@@ -66,8 +66,7 @@
                         </div>
                         <div class="mb-3">
                             <label>Status</label> <br />
-                            <input type="checkbox" wire:model.defer="status" style="width:70;height:70;"
-                                {{ $product->status ? 'checked':'' }} />
+                            <input type="checkbox" wire:model.defer="status" style="width:70;height:70;" />
                         </div>
                         @error('status') <small class="text-danger">{{ $message }}</small>@enderror
                     </div>
