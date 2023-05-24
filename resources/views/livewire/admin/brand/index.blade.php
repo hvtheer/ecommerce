@@ -37,7 +37,7 @@
                                     {{ $brand->slug }}
                                 </td>
                                 <td>
-                                    {{ $brand->status == '1' ? 'Hidden':'Visible' }}
+                                    {{ $brand->status ? 'Hidden':'Visible' }}
                                 </td>
                                 <td>
                                     <a href="#" wire:click="editBrand({{$brand->id}})" data-bs-toggle="modal"
