@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->string('name');
             $table->string('slug')->nullable();
+            $table->string('brand');
             $table->mediumText('small_description')->default('0')->comment('1=trending,0=not-trending');
             $table->longText('description')->default('0')->comment('1=hidden,0=visible');
 

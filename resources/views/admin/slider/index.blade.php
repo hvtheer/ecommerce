@@ -31,7 +31,7 @@
                             <td>{{ $slider->id }}</td>
                             <td>{{ $slider->title }}</td>
                             <td>
-                                <img src="{{ asset("$slider->image") }}" style="width: 70px; height: 70px" alt="Slider" >
+                                <img src="{{ asset($slider->image) }}" style="width: 70px; height: 70px" alt="Slider" >
                             </td>
                             <td>{{ $slider->status == '1' ? 'Hidden':'Visible' }}</td>
                             <td>
